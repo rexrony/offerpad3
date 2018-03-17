@@ -37,9 +37,9 @@ header{
 .header__logo{ padding:0px 0 0px;}
 .mainmenu{min-height: inherit; display:block;padding:36px 0 5px;}
 .navbar{width: calc(100% - 70px);  display: block;min-height: 25px;
-&__menu{  @extend %liststyle;  float: right;}
+&__menu{  @extend %liststyle; }
 &__menu--item{float: left; display: inline-block; line-height: 25px;}
-&__menu--item > a{ padding: 10px 13px; color: $linkcolor; font-size: 12px;text-transform: uppercase;font-weight: 600;
+&__menu--links{ padding: 10px 13px; color: $linkcolor; font-size: 12px;text-transform: uppercase;font-weight: 600;
 }
 }
 
@@ -48,12 +48,9 @@ header{
     @extend %liststyle;
 li{float: left;display: inline-block;position: relative; }
 li:first-child{ margin-right: 10px;}
-    &__phone a{
-font-size: 12px;font-weight: 500; color: $linkcolor;margin-top: 6px; display: block;
+    &__phone--link{font-size: 12px;font-weight: 500; color: $linkcolor;margin-top: 6px; display: block;
     }
-    &__requestoffer a{
-        display: block; background: #085c5f; color: #fff; text-align: center; width:127px; height: 30px;
-        text-transform: uppercase; font-size: 13px;line-height: 29px;
+    &__requestoffer--link{display: block; background: #085c5f; color: #fff; text-align: center; width:127px; height: 30px; text-transform: uppercase; font-size: 13px;line-height: 29px;
     }
 }
 
@@ -112,11 +109,9 @@ font-size: 12px;font-weight: 500; color: $linkcolor;margin-top: 6px; display: bl
 }
 .city__list{
     @extend %liststyle;
-    &--padd{
-padding: 0 5px;
-    }
+    &--padd{  padding: 0 5px;  }
     &item{float: left; display: inline-block;margin: 0px;}
-    &item a{color: #adadaf; font-size: 15px; padding:3px 15px; text-transform: uppercase; font-weight: 500;}
+    &item--link{color: #adadaf; font-size: 15px; padding:3px 15px; text-transform: uppercase; font-weight: 500;}
 }
 .secondwrapper{
     width: 100%; min-height:900px; padding:40px 0 20px; position: relative; display: block;margin-bottom: 0px; background: url('../images/offerpad-second-bckgnd.png') no-repeat center; background-size: cover;
@@ -155,13 +150,11 @@ box-shadow: 0px 3px 8px 1px rgba(214,214,214,1);
 .secondwrapbox{
     position: relative; height: inherit;
     &__box1{min-height:288px; height: inherit; padding:40px 65px; color: #fff; position: relative;  display: inline-block;
-    h4{
-        font-size: 36.5px; font-weight: 600; margin-bottom: 0px;color: #ff6b2a;
-    }
-    i,p {color: #131313;font-family: 'Quicksand', sans-serif;font-size:34px;font-style: italic;
+        &--heading{ font-size: 36.5px; font-weight: 600; margin-bottom: 0px;color: #ff6b2a;  }
+    i,p,&--text{color: #131313;font-family: 'Quicksand', sans-serif;font-size:34px;font-style: italic;
         font-weight: 300; display: block; padding: 5px 0;margin-bottom: 5px; letter-spacing: 1.5px;
     }
-    small{font-size: 20px;color: #ff6b2a; font-weight: 600;}
+        &--small{font-size: 20px;color: #ff6b2a; font-weight: 600;}
     }
     &__box2{background:transparent;padding: 40px 0px; color: #fff; font-size: 36px; text-transform: uppercase; min-height: 315px;
         line-height: 1.4;margin-top: 30%;position: relative;   
@@ -179,7 +172,7 @@ background: url(../images/third_wrap_bckgrnd.png) no-repeat center top;
 background-size:cover;position: relative;
 &--text{background: rgba(255,255,255,0.5); display: block; position: absolute; min-height: 270px; 
 padding:33px 0px 30px 150px; color: #fff;width:720px;z-index: 1;margin: 12% 0 0 0;
- h2{font-size:35px; text-transform: uppercase; font-weight: 700;line-height: 1.4; text-transform: uppercase; color: #206c6f; }
+    &-heading{font-size:35px; text-transform: uppercase; font-weight: 700;line-height: 1.4; text-transform: uppercase; color: #206c6f; }
  &content{font-size: 30px; line-height: 1.5; padding: 10px 0 0 0;display: block; color: #131313;}
 }
 
@@ -187,19 +180,13 @@ padding:33px 0px 30px 150px; color: #fff;width:720px;z-index: 1;margin: 12% 0 0 
 &__right{
     height: inherit;min-height: 604px; position: relative; background: url(../images/amount.png) no-repeat left top;
 background-size:contain; padding:15px 0;
-
-&--text{ display: block; position:relative; float: right;    margin-top: 15%;
-    padding:0px 118px 0px 5px; color: #fff;z-index: 1;
-     h2{font-size:35px; text-transform: uppercase; font-weight: 700;line-height: 1.0;text-transform: uppercase;color: #206c6f;
-      span{
-          font-size: 36px; display: block; font-weight:500;
-      }
-     }
-     &content{font-size:29px; line-height: 1.5; padding: 10px 0 0 0;display: block; color: #131313;}
+    &--text{ display: block; position:relative; float: right;    margin-top: 15%;
+        padding:0px 118px 0px 5px; color: #fff;z-index: 1;
+        &-headingfont-size:35px; text-transform: uppercase; font-weight: 700;line-height: 1.0;text-transform: uppercase;color: #206c6f;  }
+        &content{font-size:29px; line-height: 1.5; padding: 10px 0 0 0;display: block; color: #131313;}
     }
 
-}
-
+ }
 }
 /*********fouth_wrap_boxes********/
 .fouth_wrap_boxes{
@@ -207,19 +194,18 @@ background-size:contain; padding:15px 0;
 padding: 150px 0;
 &__box1{background:#fff; margin-bottom: 10px;
  center{padding:75px 50px; display: block;
-& h4{color: #085c5f; font-size: 30px; font-weight: 600; }
 & p{font-size:20px;color: #131313;}
 }
 }
 &__box3{background:#fff; margin-bottom: 10px;
  center{padding:75px 50px; display: block;
-& h4{color: #085c5f; font-size: 30px;  font-weight: 600;}
+
 & p{font-size:20px;color: #131313;}
 }
 }
 &_heading{background: #085c5f; padding: 15px 25px; color: #fff;
-  h4{font-weight: 500; font-size: 30px;}
-  p{font-size: 18px;}
+  &--title{font-weight: 500; font-size: 30px;}
+    &--text{font-size: 18px;}
 }
 &--text{background: #fff; padding: 12px 17px; color: #131313; font-size: 16px; text-align: justify;
 -webkit-box-shadow: inset 0px 1px 14px 2px rgba(220,220,220,1);
@@ -229,6 +215,7 @@ box-shadow: inset 0px 1px 14px 2px rgba(220,220,220,1);
 &__box2{
     margin-top: -95px; position: relative;margin-bottom: 10px;
 }
+    &--head{color: #085c5f; font-size: 30px; font-weight: 600; }
 }
 /****fouth_wrap****/
 .fouth_wrap{width: 100%;min-height:500px; margin: 40px 0 20px;
